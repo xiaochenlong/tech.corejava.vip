@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#202020"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-    <meta name="keywords" content="demo," />
+    <meta name="keywords" content="cap," />
   
 
   
@@ -17,7 +17,7 @@
   
   
   <link rel="icon" type="image/x-icon" href="/images/logo.png">
-  <title>Hello World [ 致匠心 ]</title>
+  <title>cap [ 致匠心 ]</title>
   
     <!-- stylesheets list from config.yml -->
     
@@ -70,38 +70,36 @@
   <article class="post" id="post">
     <header class="post-header text-center">
       <h1 class="title">
-        Hello World
+        cap
       </h1>
       <span>
         
-        <time class="time" datetime="2016-03-23T14:48:22.000Z">
-        2016-03-23
+        <time class="time" datetime="2024-10-09T01:40:41.000Z">
+        2024-10-09
       </time>
         
       </span>
       <span class="slash">/</span>
       <span class="post-meta">
       <span class="post-tags">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/demo/" rel="tag">demo</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cap/" rel="tag">cap</a></li></ul>
       </span>
     </span>
     <span class="slash">/</span>
     </header>
 
     <div class="post-content">
-      <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+      <p>分布式有三个指标。Consistency，Availability，Partition tolerance。简称即为CAP。Eric 提出 CAP 不能全部达到，这就是CAP定理</p>
+<span id="more"></span>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p>Consistency，一致性的意思。<br>一致性就是说，我们读写数据必须是一摸一样的。<br>比如一条数据，分别存在两个服务器中，server1和server2。<br>我们此时将数据a通过server1修改为数据b。此时如果我们访问server1访问的应该是b。<br>当我们访问server2的时候，如果返回的还是未修改的a，那么则不符合一致性，如果返回的是b，则符合数据的一致性。</p>
+<h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><p>Availability，可用性的意思。<br>这个比较好理解，就是说，只要我对服务器，发送请求，服务器必须对我进行相应，保证服务器一直是可用的。</p>
+<h2 id="P"><a href="#P" class="headerlink" title="P"></a>P</h2><p>Partition tolerance，分区容错的意思。<br>一般来说，分布式系统是分布在多个位置的。比如我们的一台服务器在北京，一台在上海。可能由于天气等原因的影响。造成了两条服务器直接不能互相通信，数据不能进行同步。这就是分区容错。我们认为，分区容错是不可避免的。也就是说 P 是必然存在的。</p>
+<blockquote>
+<p>eureka保证ap 保证可用性</p>
+</blockquote>
+<blockquote>
+<p>zookeeper保证ap 保证一致性</p>
+</blockquote>
 
     </div>
 
@@ -111,7 +109,7 @@
     
   <div id="toc" class="toc-article">
     <strong class="toc-title">目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#C"><span class="toc-text">C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A"><span class="toc-text">A</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P"><span class="toc-text">P</span></a></li></ol>
   </div>
 
 
@@ -133,15 +131,15 @@
     <div class="post-nav">
       <div class="post-nav-item post-nav-next">
         
+          <span>〈 </span>
+          <a href="/2016/03/23/hello-world/" rel="next" title="Hello World">
+          Hello World
+          </a>
+        
       </div>
   
       <div class="post-nav-item post-nav-prev">
           
-          <a href="/2024/10/09/cap/" rel="prev" title="cap">
-            cap
-          </a>
-          <span>〉</span>
-        
       </div>
     </div>
   
